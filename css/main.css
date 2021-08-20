@@ -1,0 +1,150 @@
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+*, ::after, ::before {
+    box-sizing: inherit;
+}
+
+body{
+    line-height: 1.4;
+    font-family: 'Karla', sans-serif;
+    background-color: var(--lightGray);
+    padding: var(--paddingX);
+}
+
+:root{
+    --white: hsl(0, 0%, 100%);
+    --cyan: hsl(179, 62%, 40%);
+    --lightCyan: hsl(179, 62%, 50%);
+    --brightYellow: hsl(71, 73%, 54%);
+    --darkYellow: hsl(71, 73%, 48%);
+    --lightGray: hsl(204, 43%, 93%);
+    --grayishBlue: hsl(218, 22%, 67%);
+
+    --paddingX: 1.8rem;
+    --paddingY: 1.5rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1, h2, h3{
+    font-weight: bold;
+    margin-top: 0;
+    line-height: 1.1rem;
+}
+
+h2{
+    font-size: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
+h3{
+    font-size: 1.15rem;
+}
+
+.price{
+    overflow: hidden;
+    border-radius: 0.5rem;
+    max-width: 40rem;
+    margin: auto;
+}
+
+@media only screen and (min-width: 62.5em) {
+    .price {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+    }
+
+    .community{
+        grid-column: 1 / 3;
+    }
+}
+
+.community{
+    background-color: var(--white);
+}
+
+.community h2{
+    color: var(--cyan);
+}
+
+.community .subtitle{
+    font-size: 1rem;
+    color: var(--brightYellow);
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.community p{
+    line-height: 1.5rem;
+    font-size: 0.85rem;
+    margin-bottom: 0;
+    color: var(--grayishBlue);
+}
+
+.price > *{
+    padding: var(--paddingX) var(--paddingY);
+}
+
+.subscription, .why_us {
+    color: var(--lightGray);
+}
+
+.subscription{
+    background-color: var(--cyan);
+}
+
+.subscription__price{
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+}
+
+.subscription__price span {
+    font-size: 1rem;
+    margin-left: 0.8rem;
+    font-weight: normal;
+    opacity: 0.75;
+}
+
+.subscription p {
+    font-size: 0.9rem;
+    margin-bottom: 1.75rem;
+}
+
+.subscription a{
+    display: block;
+    color: var(--white);
+    background-color: var(--brightYellow);
+    padding: 0.75rem;
+    border-radius: 0.25rem;
+    text-align: center;
+    box-shadow: 0 0.5 1rem rgba(0,0,0,0.15);
+    transition: background-color 200ms ease;
+}
+
+.subscription a:hover{
+    background-color: var(--darkYellow);
+}
+
+.why_us {
+    background-color: var(--lightCyan);
+}
+
+.why_us ul{
+    margin-top: 0;
+    padding: 0;
+}
+
+.why_us li{
+    list-style: none;
+    font-size: 0.85rem;
+    margin-bottom: 0.2rem;
+}
